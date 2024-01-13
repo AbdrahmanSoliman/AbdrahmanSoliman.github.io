@@ -1,0 +1,483 @@
+html, body
+{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10pt;
+  font-weight: normal;
+  font-style: normal;
+  color: #2e313a;
+  margin-top: 0px;
+  background: url(../images/bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  letter-spacing: 0.003em;
+}
+
+figure {
+  width: 100%;
+  margin: 0;
+  float: left;
+  position: relative;
+  cursor: pointer;
+}
+figure:before,
+figure:after {
+  position: absolute;
+}
+figure:before {
+  top: 50%;
+  left: 50%;
+  width: 72px;
+  height: 72px;
+  margin-top: -36px;
+  margin-left: -36px;
+  content: url(../images/gif.png);
+}
+figure.play:before {
+  display: none;
+}
+
+.gif
+{
+    background-image: url(../images/gif.png);
+    background-repeat: no-repeat;
+    background-size: 72px 72px;
+    background-position: 0 0;
+    height: 72px;
+    left: 50%;
+    position: relative;
+    top: 50%;
+    width: 72px
+}
+
+@font-face
+{
+  font-family: alternate-gothic-no-2-d;
+  src: url('../fonts/AlternateGothicNo2DRegular.ttf'),
+  url('../fonts/AlternateGothicNo2DRegular.ttf');
+}
+
+@font-face
+{
+  font-family: adobe-garamond-pro-italic;
+  src: url('../fonts/AdobeGaramondProItalic.ttf'),
+  url('../fonts/AdobeGaramondProItalic.ttf');
+}
+
+@font-face
+{
+  font-family: adobe-garamond;
+  src: url('../fonts/AdobeGaramond.ttf'),
+  url('../fonts/AdobeGaramond.ttf');
+}
+
+#wrap
+{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 50px; /* height of thumbs (if not required set to 0) */
+  height: auto; /* optionally add !important for WP version */
+  width: auto;
+}
+
+.header
+{
+  width: 100%;
+  margin: auto;
+}
+
+.slide
+{
+  /*background-color: #fff;*/
+  width: 80%;
+  max-width: 1800px;
+  min-height: 75%;
+  color: #000;
+  position: absolute;
+  top: 14%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 0;
+  text-align: left;
+  overflow: visible;
+}
+
+.label
+{
+  border-radius: 4px;
+  font-family: Helvetica;
+  font-size: 0.9em;
+  text-align: center;
+  color: #fff;
+  padding: 5px;
+  line-height: normal;
+  padding-left: 6px;
+  padding-right: 6px;
+  display: inline-block;
+  margin-bottom: 0.3em;
+  margin-right: 0.3em;
+}
+
+.gamedesign
+{
+  background-color: #492E34;
+  content: "Script";
+}
+
+.leveldesign
+{
+  background-color: #7C334B;
+  content: "Game Programming";
+}
+
+.code
+{
+  background-color: #A63661;
+  content: 'Level Design';
+}
+
+.screenshot
+{
+  width: 65%;
+  min-width: 2px;
+  position:relative;
+  display: block;
+  float: left;
+  clear: left;
+  height: 0;
+  padding-top: calc(0.65 * 56.25%);
+  overflow: hidden;
+  background-size: 100%;
+  box-shadow: 4px 4px 20px -6px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
+ul
+{
+  padding: 2;
+  font-weight: bold;
+}
+
+li { margin-left: -1em }
+
+.video
+{
+  width: 65%;
+  min-width: 2px;
+  position:relative;
+  display: block;
+  float: left;
+  clear: left;
+  height: calc(0.65 * 56.25%)*4;
+  overflow: hidden;
+  background-size: 100%;
+  box-shadow: 4px 4px 20px -6px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+}
+
+
+/* different aspect ratios for images */
+/*.threetwo
+{
+  width: 540px;
+  height: 360px;
+  margin-left: 50px;
+}
+
+.fourthree
+{
+  width: 480px;
+  height: 360px;
+  margin-left: 80px;
+}
+
+.square
+{
+  width: 360px;
+  height: 360px;
+  margin-left: 140px;
+}*/
+
+/* different aspect ratios for images */
+.threetwo
+{
+  padding-top: calc(0.66 * 66.66%);
+}
+
+.fourthree
+{
+  padding-top: calc(0.66 * 75%);
+}
+
+.square
+{
+  width: 39%;
+  padding-top: calc(0.39 * 100%);
+}
+
+/* images for the slides */
+/* .pacman { background-image: url("../images/thumb_pacman.png"); } */
+.jay { background-image: url("../images/picture.jpg"); }
+.megaplanet { background-image: url("../images/photo_megaplanetgame.png"); } 
+
+.youtube
+{
+  border-width: 0px;
+  border-radius: 4px;
+}
+
+.screenshot iframe, .screenshot object, .screenshot embed
+{
+  position:absolute;
+  top:0;
+  left:0;
+  margin: 0;
+  padding: 0;
+  width:100%;
+  height:100%;
+}
+
+.description
+{
+  width: 30%;
+  float: left;
+  margin-left: 20px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.description-me
+{
+  width: 55%;
+  height: 100%;
+  float: left;
+  margin-left: 20px;
+  overflow-y: auto;
+  /*background-color: #fff;*/
+}
+
+@media only screen and (max-width: 1280px)
+{
+  .description, .description-me
+  {
+      font-size: 0.9em;
+  }
+}
+
+@media only screen and (max-width: 768px)
+{
+  /* hide navigation
+  .rsNav
+  {
+    display:none; width:0 !important; height:0 !important; 
+  }*/
+
+  .video
+  {
+      width: 100%;
+  }
+
+  .screenshot
+  {
+      width: 100%;
+      padding-top: calc(1 * 56.25%);
+  }
+
+  .square
+  {
+    width: 100%;
+    padding-top: 100%;
+  }
+
+  .youtube
+  {
+    height: 100%;
+  }
+
+  .description, .description-me
+  {
+    clear: left;
+    margin-top: 2em;
+    margin-left: 0px;
+    margin-right: 0px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    height: auto;
+  }
+
+  .slide
+  {
+   overflow-y: auto;
+   height: auto;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;
+  }
+    .rsDefault .rsArrow
+  {
+  width: 44px;
+  }
+
+  /*.rsDefault .rsThumbsHor {
+  height: 12vw;
+  }
+
+  .rsDefault .rsThumb {
+    width: 10.6vw;
+    height: 10.6vw;
+  }*/
+}
+
+
+.bold
+{
+  font-weight: bold;
+}
+
+.title-project
+{
+  font-family: alternate-gothic-no-2-d;
+  font-size: 2.4rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #2e313a;
+  margin-top: 0px;
+  /*text-shadow: 2px 2px 2px rgba(150, 150, 150, 0.4);*/
+  margin-bottom: -1rem;
+  padding-bottom: -1rem;
+}
+
+.intro
+{
+  max-width: 640px;
+  min-height: 240px;
+  text-align: center;
+  margin: auto;
+  margin-top: -50px;
+}
+
+.verticalalign
+{
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+#title
+{
+  font-family: alternate-gothic-no-2-d;
+  font-size: 55pt;
+  font-weight: normal;
+  width: 100%;
+  font-style: normal;
+  color: #2e313a;
+  margin-top: 5%;
+  text-shadow: 2px 2px 2px rgba(150, 150, 150, 0.4);
+  margin-bottom: 0px;
+}
+
+#sub-title
+{
+  font-family: adobe-garamond-pro-italic;
+  font-size: 13pt;
+  font-weight: normal;
+  font-style: normal;
+  color: #2e313a;
+  margin-bottom: 0px;
+  margin-top: -0.5em;
+  text-align: right;
+  margin-right: 15px;
+  letter-spacing: 0.003em;
+}
+
+#intro-text
+{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10pt;
+  font-weight: normal;
+  font-style: normal;
+  color: #2e313a;
+  margin-bottom: 1em;
+  margin-top: 2em;
+  line-height: 2em;
+  font-size: 1.2em;
+  text-align: center;
+  letter-spacing: 0.003em;
+}
+
+#intro-text a:link, #intro-text a:visited, #intro-text a
+{
+  color: #000;
+  text-decoration: none;
+}
+
+.icon
+{
+  width: 32px;
+  height: 32px;
+  background-size: contain;
+  display: inline-block;
+}
+
+#linkedin { background-image: url('../images/icon_in.png'); }
+#email { background-image: url('../images/icon_email.png'); }
+#github { background-image: url('../images/icon_github.png'); }
+
+#contact
+{
+  display: inline-block;
+  text-align: center;
+  width: 96px*3;
+}
+
+#contact a:link, #contact a:visited, #contact a
+{
+  color: #000;
+  font-style: italic;
+  text-decoration: none;
+}
+
+#contact a:hover, #contact a:active
+{
+  cursor: pointer;
+  color: #000;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.space
+{
+  margin-right: 0.5em;
+}
+
+a:link,a:visited,a
+{
+  /*color: #f03;*/
+  color: #000;
+  font-style: italic;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover,a:active
+{
+  text-decoration: underline;
+  font-style: italic;
+  cursor: pointer;
+  color: #000;
+}
+
