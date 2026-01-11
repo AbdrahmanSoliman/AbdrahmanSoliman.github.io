@@ -285,6 +285,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 };
                 setTimeout(loadVideo, animToggle.checked ? 400 : 0);
+
+                // Stop auto-slide while modal is open
+                stopAutoSlide();
             };
 
             if (animToggle.checked) {
@@ -295,7 +298,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     modal.addEventListener('click', (e) => {
-        if (e.target === modal || e.target.classList.contains('modal-close')) modal.classList.remove('active');
+        if (e.target === modal || e.target.classList.contains('modal-close')) {
+            modal.classList.remove('active');
+            // Clear modal content to stop YouTube video from playing
+            setTimeout(() => {
+                modalBody.innerHTML = '';
+            }, 300); // Wait for close animation to finish
+            // Resume auto-slide after modal closes
+            startAutoSlide();
+        }
     });
 
     // Startup
